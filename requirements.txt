@@ -12,8 +12,10 @@ nbdime
 packgenlite @ git+https://github.com/krokrob/packgenlite.git@master
 pandas
 pylint
+PyQt5==5.12.3
 pytest
 scikit-learn
+scipy
 seaborn
 tensorflow
 TIME-python
