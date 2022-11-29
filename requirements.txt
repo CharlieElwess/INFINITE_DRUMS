@@ -1,0 +1,19 @@
+audiomentations
+glob2
+imageio
+ipdb
+IPython
+jupyter
+jupyterlab
+librosa
+matplotlib
+numpy
+nbdime
+packgenlite @ git+https://github.com/krokrob/packgenlite.git@master
+pandas
+pylint
+pytest
+scikit-learn
+seaborn
+tensorflow
+TIME-python
