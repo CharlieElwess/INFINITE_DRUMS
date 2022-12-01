@@ -183,9 +183,9 @@ if __name__ == "__main__":
     SAMPLE_RATE = 48000
     MONO = True
 
-    SPECTROGRAMS_SAVE_DIR = "/Users/charlieelwess/Dropbox/LE_WAGON/FINAL_PROJECT/First_Kick_Spectrograms"
-    MIN_MAX_VALUES_SAVE_DIR = "/Users/charlieelwess/Dropbox/LE_WAGON/FINAL_PROJECT/First_Kick_MinMax_Vals"
-    FILES_DIR = "/Volumes/CE_CADDY/TRAINING_SAMPLES/KICKS_standardized"
+    SPECTROGRAMS_SAVE_DIR = "/Users/chloeguiver/kicks_specs"
+    MIN_MAX_VALUES_SAVE_DIR = "/Users/chloeguiver/min_max_kicks"
+    FILES_DIR = "/Users/chloeguiver/code/Kicks+Snares_Standardized/KICKS_standardized "
 
     # instantiate all objects
     loader = Loader(SAMPLE_RATE, DURATION, MONO)
