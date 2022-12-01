@@ -32,7 +32,6 @@ def create_audio_player(audio_data, sample_rate):
     return virtualfile
 
 audio=create_audio_player(load_audio_sample(file_path)[0], 48000)
-
 st.audio(audio)
 
 
