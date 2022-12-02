@@ -33,10 +33,10 @@ def get_css():
 
     h1 {
     font-family: 'Verdana', monospace;
-    color: rgb(0,0,0);
+    color: rgb(255,250,250);
     font-size: 100px;
     -webkit-text-fill-color: rgb(46,118,94);
-    -webkit-text-stroke: 2px;
+    -webkit-text-stroke: 5px;
     }
 
     h2 {

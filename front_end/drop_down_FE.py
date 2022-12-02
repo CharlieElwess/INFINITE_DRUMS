@@ -23,20 +23,22 @@ st.markdown(get_css(), unsafe_allow_html=True)
 
 st.title("INFINITE DRUMS")
 st.markdown("<h3>&nbsp;Generate infinite brand new drum sounds.&nbsp;</h3>", unsafe_allow_html=True)
-st.markdown("Please select snare or kicks to see our generated sounds!")
+st.markdown("Please select snare, kick, or hi-hat to see our generated sounds!")
 
 form = st.form(key="submit-form")
-drum_options = form.selectbox("Drum Options", ["Snare", "Kicks"])
+drum_options = form.selectbox("Drum Options", ["Snare", "Kick", "Hi-hat"])
 generate = form.form_submit_button("Generate")
 
 file_path_snares='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
 file_path_kicks='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/KICKS_standardized/wadm_xbase999_kick_212_4824norm.wav'
-
+file_path_hihat='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/hi_hat.wav'
 
 if drum_options == "Snare":
     file_path = file_path_snares
-elif drum_options == "Kicks":
+elif drum_options == "Kick":
     file_path = file_path_kicks
+elif drum_options == "Hi-hat":
+    file_path = file_path_hihat
 
 
 
