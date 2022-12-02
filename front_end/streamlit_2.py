@@ -15,7 +15,7 @@ st.markdown("<h2 style='text-align: center; color: black;'>Generated Snare Sampl
 # data_dir = '/Users/chloeguiver/snare_specs/'
 # audiofiles = glob(data_dir + '/*.wav.npy')
 
-file_path='/Users/chloeguiver/code/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
+file_path='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
 
 def load_audio_sample(file):
     y, sr = librosa.load(file, sr=48000)
