@@ -13,6 +13,9 @@ import random
 import librosa.display
 import IPython
 from random import *
+from page_design1 import get_css
+
+st.markdown(get_css(), unsafe_allow_html=True)
 
 def postproc_and_play_snare(generated_spectrogram):
     #sample rate
@@ -29,17 +32,17 @@ def postproc_and_play_snare(generated_spectrogram):
     return new_snare_final
 from scipy.io.wavfile import write
 
-snare = np.load('/Data/toms.npy')
+snare = np.load('/Users/henrytriggs/code/CharlieElwess/INFINITE_DRUMS/data/toms.npy')
 
-st.markdown("<h1 style='text-align: center; color: purple;'>INFINITE DRUMS!</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: black;'>Generated Snare Sample</h5>", unsafe_allow_html=True)
+#st.markdown("<h1 style='text-align: center; color: purple;'>INFINITE DRUMS!</h1>", unsafe_allow_html=True)
+#st.markdown("<h2 style='text-align: center; color: black;'>Generated Snare Sample</h5>", unsafe_allow_html=True)
 
 st.title("INFINITE DRUMS")
-st.text("Our ML generated drums")
-st.markdown("Please a sound to generate")
+st.markdown("<h3>&nbsp;Our ML generated drums&nbsp;</h3>", unsafe_allow_html=True)
+#st.markdown("Please select a sound to generate")
 
 form = st.form(key="submit-form")
-drum_options = form.selectbox("Drum Options", ["Snare", "Kicks"])
+drum_options = form.selectbox("Please select a drum to generate", ["Snare", "Kick", "Hi-hat"])
 generate = form.form_submit_button("Generate")
 import time
 if generate:

@@ -26,11 +26,11 @@ def get_css():
     }
 
     p {
-    color: rgb(255,255,255);
-    font-family: 'IBM Plex Mono Bold', monospace;
+    color: rgb(200,20,100);
+    font-family: 'Helvetica', monospace;
     font-size: 25px;
-    -webkit-text-fill-color: rgb(46,118,94);
-    -webkit-text-stroke: 2px;
+    -webkit-text-fill-color: rgb(200,20,100);
+    -webkit-text-stroke: 1px;
     }
 
     h1 {
@@ -48,7 +48,7 @@ def get_css():
 
     h3 {
     color: rgb(255,255,255);
-    font-family: 'IBM Plex Mono Bold', monospace;
+    font-family: 'Helvetica', monospace;
     -webkit-text-fill-color: rgb(223,206,204);
     -webkit-text-stroke: 2px
     background-color: white;
@@ -56,12 +56,12 @@ def get_css():
 
 
     ol {
-    color: white;
+    color: grey;
     -webkit-text-stroke: 1px
     }
 
     ul {
-    color: rgb(7,150,106);
+    color: rgb(150,150,106);
     -webkit-text-stroke: 1px
     }
 
