@@ -179,13 +179,13 @@ class PreprocessingPipeline:
 if __name__ == "__main__":
     FRAME_SIZE = 512
     HOP_LENGTH = 256
-    DURATION = 1  # in seconds
+    DURATION = 2  # in seconds
     SAMPLE_RATE = 48000
     MONO = True
 
-    SPECTROGRAMS_SAVE_DIR = "/Users/charlieelwess/Dropbox/LE_WAGON/FINAL_PROJECT/First_Kick_Spectrograms"
+    SPECTROGRAMS_SAVE_DIR = "/Volumes/CE_CADDY/TRAINING_SAMPLES/808s_Preprocessed_2s"
     MIN_MAX_VALUES_SAVE_DIR = "/Users/charlieelwess/Dropbox/LE_WAGON/FINAL_PROJECT/First_Kick_MinMax_Vals"
-    FILES_DIR = "/Volumes/CE_CADDY/TRAINING_SAMPLES/KICKS_standardized"
+    FILES_DIR = "/Volumes/CE_CADDY/TRAINING_SAMPLES/808s_standardized"
 
     # instantiate all objects
     loader = Loader(SAMPLE_RATE, DURATION, MONO)
