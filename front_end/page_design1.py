@@ -26,7 +26,7 @@ def get_css():
     }
 
     p {
-    color: rgb(0,128,128);
+    color: rgb(50,128,128);
     font-family: 'IBM Plex Mono Bold', monospace;
     font-size: 25px;
     }

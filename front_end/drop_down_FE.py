@@ -15,21 +15,22 @@ import IPython
 from matplotlib import pyplot as plt
 import librosa.display
 from scipy.io import wavfile
+from page_design1 import get_css
 
 #from my_package.load_files import load_audio_sample
 
-
+st.markdown(get_css(), unsafe_allow_html=True)
 
 st.title("INFINITE DRUMS")
-st.text("Our ML generated kicks and snares!")
+st.markdown("<h3>&nbsp;Generate infinite brand new drum sounds.&nbsp;</h3>", unsafe_allow_html=True)
 st.markdown("Please select snare or kicks to see our generated sounds!")
 
 form = st.form(key="submit-form")
 drum_options = form.selectbox("Drum Options", ["Snare", "Kicks"])
 generate = form.form_submit_button("Generate")
 
-file_path_snares='/Users/chloeguiver/code/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
-file_path_kicks='/Users/chloeguiver/code/Kicks+Snares_Standardized/KICKS_standardized/wadm_xbase999_kick_212_4824norm.wav'
+file_path_snares='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
+file_path_kicks='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/KICKS_standardized/wadm_xbase999_kick_212_4824norm.wav'
 
 
 if drum_options == "Snare":
@@ -54,9 +55,27 @@ def create_audio_player(audio_data, sample_rate):
 
 audio=create_audio_player(load_audio_sample(file_path)[0], 48000)
 
+#if generate:
+    #with st.spinner("Generating sound..."):
+
+
+#if st.checkbox('Show progress bar'):
 if generate:
-    with st.spinner("Generating sound..."):
-        st.audio(audio)
+    import time
+
+    'Dreaming up your new sound...'
+
+    # Add a placeholder
+    latest_iteration = st.empty()
+    bar = st.progress(0)
+
+    for i in range(100):
+        # Update the progress bar with each iteration.
+        #latest_iteration.text(f'beep boop {i+1}')
+        bar.progress(i + 1)
+        time.sleep(0.02)
+
+    st.audio(audio)
 
 
 def plot_wave(y, sr):
