@@ -29,8 +29,8 @@ form = st.form(key="submit-form")
 drum_options = form.selectbox("Drum Options", ["Snare", "Kicks"])
 generate = form.form_submit_button("Generate")
 
-file_path_snares='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
-file_path_kicks='/Users/henrytriggs/Documents/Work/Lewagon/Project_inf_drums/Kicks+Snares_Standardized/KICKS_standardized/wadm_xbase999_kick_212_4824norm.wav'
+file_path_snares='/Users/chloeguiver/code/Kicks+Snares_Standardized/SNARES_standardized/wadm_xbase999_snare_089_4824norm.wav'
+file_path_kicks='/Users/chloeguiver/code/Kicks+Snares_Standardized/KICKS_standardized/wadm_xbase999_kick_212_4824norm.wav'
 
 
 if drum_options == "Snare":
@@ -86,7 +86,7 @@ def plot_wave(y, sr):
     return plt.gcf()
 
 wave_file = plot_wave(load_audio_sample(file_path)[0]
-                      ,load_audio_sample(file_path_snares)[1])
+                      ,load_audio_sample(file_path)[1])
 
 
 st.pyplot(wave_file)
@@ -102,6 +102,6 @@ def plot_transformation(y, sr):
     return plt.gcf()
 
 spectrogram= plot_transformation(load_audio_sample(file_path)[0]
-                                 ,load_audio_sample(file_path_snares)[1])
+                                 ,load_audio_sample(file_path)[1])
 
 st.pyplot(spectrogram)
