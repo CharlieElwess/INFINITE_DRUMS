@@ -25,7 +25,6 @@ import os.path
 import io
 import subprocess
 import time
-from pydub import AudioSegment
 
 snare = np.load('data/snares_100.npy')
 kicks = np.load('data/kicks_100.npy')
