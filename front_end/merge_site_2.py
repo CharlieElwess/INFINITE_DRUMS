@@ -14,7 +14,9 @@ import librosa.display
 import IPython
 from random import *
 from page_design1 import get_css
+
 from scipy.signal import butter, lfilter, freqz, filtfilt
+
 
 st.markdown(get_css(), unsafe_allow_html=True)
 
@@ -37,6 +39,7 @@ snare = np.load('/Users/chloeguiver/toms.npy')
 
 kicks = np.load('/Users/chloeguiver/toms.npy')
 
+
 hi_hat = np.load('/Users/chloeguiver/toms.npy')
 
 sr=48000
@@ -53,6 +56,7 @@ def butter_lowpass(cutoff, sr, order):
 def butter_lowpass_filter(data, cutoff, sr, order):
     b, a = butter_lowpass(cutoff, sr, order=order)
     y = lfilter(b, a, data)
+
     return y
 
 def postproc_and_play_kicks(generated_spectrogram):
@@ -67,6 +71,7 @@ def postproc_and_play_kicks(generated_spectrogram):
     # pitch down audio by random amount
     new_kick_final = librosa.effects.pitch_shift(new_kick_nr, sr=sr, n_steps = pdown, bins_per_octave=16, res_type='kaiser_best')
     #LOWPASS
+
     new_kick_final = butter_lowpass_filter(new_kick_final, cutoff, sr, order)
     return new_kick_final
 
@@ -84,7 +89,7 @@ def butter_highpass_filter(data, cutoff, sr, order):
     y = filtfilt(b, a, data)
     return y
 
-######
+
 
 ## POST-PROCESS AND PLAY GENERATED SPECTROGRAMS
 def postproc_and_play_hihat(generated_spectrogram):
@@ -101,6 +106,10 @@ def postproc_and_play_hihat(generated_spectrogram):
     # hipass
     new_hihat_final = butter_highpass_filter(new_hihat_final, cutoff, sr, order)
     return new_hihat_final
+
+    # new_kick_final = butter_lowpass_filter(new_kick_final, cutoff, sr, order)
+    return new_kick_final
+
 
 
 st.title("INFINITE DRUMS")
@@ -164,6 +173,7 @@ if generate:
 
 
 
+
     col1, col2 = st.columns(2)
     sr=48000
     if drum_options == "Kick":
@@ -210,6 +220,12 @@ if drum_options == "Hi-hat":
     i = randint(1,99)
     sample = postproc_and_play_hihat(hi_hat[i])
 
+col1, col2 = st.columns(2)
+sr=48000
+if drum_options == "Kick":
+    i = randint(1,99)
+    sample = postproc_and_play_kicks(kicks[i])
+
     st.audio(sample, sample_rate=sr)
     with io.BytesIO() as buffer:
         # Write array to buffer
@@ -217,7 +233,11 @@ if drum_options == "Hi-hat":
         st.download_button(
             label="Download your sample",
         data = buffer, # Download buffer
+
         file_name = 'hi_hat.wav')
+
+        file_name = 'kick.wav')
+
 
     with col1:
         def plot_wave(y, sr):
@@ -229,7 +249,11 @@ if drum_options == "Hi-hat":
         st.pyplot(wave_file)
 
     with col2:
-        def plot_transformation(y, sr):
+
+        
+
+        def plot_transformation(y, sr): #transformation_name):
+
             D = librosa.stft(y)  # STFT of y
             S_db = librosa.amplitude_to_db(np.abs(D), ref=np.max)
             fig, ax = plt.subplots()
