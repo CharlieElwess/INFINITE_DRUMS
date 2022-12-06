@@ -36,8 +36,8 @@ st.markdown(get_css(), unsafe_allow_html=True)
 
 setup()
 
-st.title("INFINITE DRUMS")
-st.markdown("<h3>&nbsp;Our ML generated drums&nbsp;</h3>", unsafe_allow_html=True)
+st.title("infinite_drums")
+st.markdown("<h3>&nbsp;Our machine generated drums&nbsp;</h3>", unsafe_allow_html=True)
 
 form = st.form(key="submit-form")
 drum_options = form.selectbox("Please select a drum to generate", ["Snare", "Kick", "Hi-hat"])
