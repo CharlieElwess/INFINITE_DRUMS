@@ -25,7 +25,7 @@ import os.path
 import io
 import subprocess
 import time
-
+from pydub import AudioSegment
 
 snare = np.load('data/snares_100.npy')
 kicks = np.load('data/kicks_100.npy')
@@ -61,9 +61,7 @@ if generate:
         sample = postproc_and_play_snare(snare[i])
 
         st.audio(sample, sample_rate=sr)
-        with io.BytesIO() as buffer:
-            write(buffer, rate=sr, data=sample.astype(np.int16))
-            st.download_button(label="Download your sample", data = buffer, file_name ='snare.wav')
+        st.write("Download your amazing new sample from the player above!!!")
         with col1:
             wave_file = plot_wave(sample, sr)
             st.pyplot(wave_file)
@@ -76,10 +74,7 @@ if generate:
         sample = postproc_and_play_kicks(kicks[i])
 
         st.audio(sample, sample_rate=sr)
-        with io.BytesIO() as buffer:
-            # Write array to buffer
-            write(buffer, rate=sr, data=sample.astype(np.int16))
-            st.download_button(label="Download your sample",data = buffer, file_name='kick.wav')
+        st.write("Download your amazing new sample from the player above!!!")
         with col1:
             wave_file = plot_wave(sample, sr)
             st.pyplot(wave_file)
@@ -92,12 +87,7 @@ if generate:
         sample = postproc_and_play_hihat(hi_hat[i])
 
         st.audio(sample, sample_rate=sr)
-        with io.BytesIO() as buffer:
-            # Write array to buffer
-            write(buffer, rate=sr, data=sample.astype(np.int16))
-            st.download_button(
-                label="Download your sample",
-            data = buffer,file_name = 'hi_hat.wav')
+        st.write("Download your amazing new sample from the player above!!!")
         with col1:
             wave_file = plot_wave(sample, sr)
             st.pyplot(wave_file)

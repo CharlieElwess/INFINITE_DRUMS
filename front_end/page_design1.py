@@ -9,7 +9,7 @@ def get_css():
     [class="main css-k1vhr4 egzxvld3"]{
         /* background-image: url("https://live.staticflickr.com/1937/31029969758_d59c78ae0f_b.jpg"); */
         /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/03/Meshuggah_Stage_Design_2022%2C_Tomas_Haake_Drumkit%2C_Ancienne_Belgique%2C_Belgium._13.jpg"); */
-        background-image: url("https://img.freepik.com/free-photo/drum-kit-dark-background-with-stage-lighting-copy-space_169016-13944.jpg?w=1480&t=st=1670329804~exp=1670330404~hmac=7f325bb8ba95d2ba99badd8978665bd3f6731dbd2455ed0331ddfb7318e8ab16");
+        background-image: url("https://i0.hippopx.com/photos/531/616/16/battery-musical-instruments-music-preview.jpg");
         background-attachement: fixed;
         background-size: cover
     }
@@ -27,10 +27,10 @@ def get_css():
     }
 
     p {
-    color: rgb(200,20,100);
+    color: rgb(255,255,255);
     font-family: 'Helvetica', monospace;
     font-size: 25px;
-    -webkit-text-fill-color: rgb(200,20,100);
+    -webkit-text-fill-color: rgb(255,255,255);
     -webkit-text-stroke: 1px;
     }
 
@@ -62,7 +62,7 @@ def get_css():
     }
 
     ul {
-    color: rgb(150,150,106);
+    color: rgb(255,255,255);
     -webkit-text-stroke: 1px
     }
 
