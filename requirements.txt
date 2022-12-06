@@ -1,4 +1,5 @@
 audiomentations
+glob
 glob2
 imageio
 ipdb
@@ -15,8 +16,17 @@ pandas
 pylint
 PyQt5==5.12.3
 pytest
+random
 scikit-learn
 scipy
 seaborn
+streamlit
+subprocess
 tensorflow
 TIME-python
+io
+os
+librosa.display
+os.path
+scipy.io.wavfile
+scipy.signal
