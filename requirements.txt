@@ -16,9 +16,7 @@ PyQt5==5.12.3
 pytest
 scikit-learn
 scipy
-seaborn
 streamlit
-subprocess
 tensorflow
 io
 os
