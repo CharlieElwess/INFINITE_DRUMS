@@ -17,10 +17,7 @@ pytest
 scikit-learn
 scipy
 streamlit
-tensorflow
-io
-os
+tensor-flow
 librosa.display
-os.path
 scipy.io.wavfile
 scipy.signal
