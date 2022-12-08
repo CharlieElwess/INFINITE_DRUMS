@@ -9,7 +9,6 @@ from matplotlib import pyplot as plt
 import librosa.display
 from scipy.io import wavfile
 import numpy as np
-from glob import glob
 import noisereduce as nr
 import random
 import librosa.display

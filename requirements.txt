@@ -1,6 +1,4 @@
 audiomentations
-glob
-glob2
 imageio
 ipdb
 IPython
