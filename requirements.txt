@@ -17,5 +17,3 @@ pytest
 scikit-learn
 scipy
 streamlit
-scipy.io.wavfile
-scipy.signal
