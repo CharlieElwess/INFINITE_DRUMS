@@ -125,4 +125,4 @@ def plot_wave(y, sr):
 #setup
 def setup():
     os.system("gdown --id 1-I_kCu3a0L8XeMDHZL_ILxwIcAyuNoPX")
-    os.system("tar -xf PianoGPT.tar.gz")
+    # os.system("tar -xf PianoGPT.tar.gz")

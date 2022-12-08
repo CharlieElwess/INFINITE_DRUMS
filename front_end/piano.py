@@ -13,7 +13,7 @@ from page_design1 import get_css
 @st.cache(allow_output_mutation=True)
 def setup():
     os.system("gdown --id 1-I_kCu3a0L8XeMDHZL_ILxwIcAyuNoPX")
-    os.system("tar -xf PianoGPT.tar.gz")
+    # os.system("tar -xf PianoGPT.tar.gz")
 
 
 
