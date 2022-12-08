@@ -92,3 +92,5 @@ if generate:
         with col2:
             spectrogram= plot_transformation(sample,sr)
             st.pyplot(spectrogram)
+
+st.video('https://youtu.be/htwXH6QbAL8')
