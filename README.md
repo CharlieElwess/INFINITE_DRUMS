@@ -11,7 +11,7 @@ Generating infinite one-shot drum samples using a variational auto-encoder model
 
 Using a personal collection of drum recordings as input data, a VAE was trained to reproduce the input sounds following compression to a lower-dimensional latent space. Once the model was trained, entirely novel samples could be created by sampling from this latent space and passing the output through the decoder side of the model.
 
-## [Features](https://github.com/CharlieElwess/INFINITE_DRUMS#features)
+## Features
 
 -   Select your preferred drum type.
 -   Visualize the waveform and spectrogram of your generated sound.
